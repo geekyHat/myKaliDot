@@ -7,8 +7,7 @@ return {
   ft = "markdown",
   keys = {
 { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New Obsidian note", mode = "n" },
-      { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "Open Obsidian notes", mode = "n" },
-      { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Search Obsidian notes", mode = "n" },
+      { "<leader>oo", "<cmd>ObsidianSearch<cr>", desc = "Search Obsidian notes", mode = "n" },
       { "<leader>osw", "<cmd>ObsidianQuickSwitch<cr>", desc = "Quick Switch", mode = "n" },
       { "<leader>ob", "<cmd>ObsidianBacklinks<cr>", desc = "Show location list of backlinks", mode = "n" },
       { "<leader>ot", "<cmd>ObsidianTemplate<cr>", desc = "Follow link under cursor", mode = "n" },
@@ -38,7 +37,7 @@ return {
   --    },
       {
         name = "Notes",
-        path = "/mnt/x/MyNotes-2024",
+        path = "~/shared-drives/X:/MyNotes-2024",
       },
     },
 

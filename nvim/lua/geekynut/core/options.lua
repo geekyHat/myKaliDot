@@ -16,10 +16,15 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+opt.incsearch = true -- incrementally highlight searches as you type
 
 opt.cursorline = true
+
+opt.termguicolors = true
 
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 opt.conceallevel = 2 -- set conceal level for obsidian plugin
+
+
