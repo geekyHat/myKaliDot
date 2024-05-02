@@ -1,15 +1,21 @@
 return {
+  -- Windows WSL needs wsl-open for the :ObsidianOpen command. `sudo npm -i -g wsl-open` 
+  -- Linux needs xclip to paste images`sudo apt install xclip`
   "epwalsh/obsidian.nvim",
   version = "*",  -- recommended, use latest release instead of latest commit
   lazy = true,
   ft = "markdown",
   keys = {
 { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New Obsidian note", mode = "n" },
-      { "<leader>oo", "<cmd>ObsidianSearch<cr>", desc = "Search Obsidian notes", mode = "n" },
-      { "<leader>os", "<cmd>ObsidianQuickSwitch<cr>", desc = "Quick Switch", mode = "n" },
+      { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "Open Obsidian notes", mode = "n" },
+      { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Search Obsidian notes", mode = "n" },
+      { "<leader>osw", "<cmd>ObsidianQuickSwitch<cr>", desc = "Quick Switch", mode = "n" },
       { "<leader>ob", "<cmd>ObsidianBacklinks<cr>", desc = "Show location list of backlinks", mode = "n" },
       { "<leader>ot", "<cmd>ObsidianTemplate<cr>", desc = "Follow link under cursor", mode = "n" },
       { "<leader>op", "<cmd>ObsidianPasteImg<cr>", desc = "Paste imate from clipboard under cursor", mode = "n" },
+      { "<leader>of", "<cmd>ObsidianFollowLink<cr>", desc = "follows note under cursor", mode = "n" },
+      { "<leader>oe", "<cmd>ObsidianExtractNote<cr>", desc = "Extracts visually selected note creates a new one with link", mode = "n" },
+      { "<leader>od", "<cmd>ObsidianToggleCheckbox<cr>", desc = "Cycle through checkbox options.", mode = "n" },
   },
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
@@ -32,7 +38,7 @@ return {
   --    },
       {
         name = "Notes",
-        path = "~/shared-drives/X:/MyNotes-2024",
+        path = "/mnt/x/MyNotes-2024",
       },
     },
 
@@ -52,22 +58,6 @@ return {
     end
   end,
 
-  mappings = {
-    -- "Obsidian follow"
-    ["<leader>of"] = {
-      action = function()
-        return require("obsidian").util.gf_passthrough()
-      end,
-      opts = { noremap = false, expr = true, buffer = true },
-    },
-    -- Toggle check-boxes "obsidian done"
-    ["<leader>od"] = {
-      action = function()
-        return require("obsidian").util.toggle_checkbox()
-      end,
-      opts = { buffer = true },
-    },
-   },
 
   note_frontmatter_func = function(note)
     -- This is equivalent to the default frontmatter function.
