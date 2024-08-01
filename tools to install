@@ -1,0 +1,14 @@
+# Tools to install
+asciinema `cargo install --locked --git https://github.com/asciinema/asciinema`
+tmuxinator
+``ỳml
+windows:
+  - vpn: sudo openvpn --config ~/vpn/universal.ovpn
+  - script: cd ~/lab && clear
+  - target:
+      layout: main-horizontal
+      panes:
+        - listen:
+        - shell:
+  - server:
+```
