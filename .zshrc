@@ -100,10 +100,11 @@ setopt hist_find_no_dups
 setopt hist_verify            # show command with history expansion to user before running it
 #setopt share_history         # share command history data
 
+#export path neovim
+export PATH=$PATH:~/.nvim/bin
 # force zsh to show the complete history
 alias cl="clear"
 alias history="history 0"
-alias nvim="~/.nvim/nvim.appimage"
 alias ff="fzf --preview 'cat {}'"
 alias UU='sudo apt update && sudo apt upgrade -y'
 alias cl='clear'
@@ -151,9 +152,9 @@ alias la='ls -A'
 alias l='ls -CF'
 
 export PATH="$PATH:/home/kali/.local/bin"
+export EDITOR='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
