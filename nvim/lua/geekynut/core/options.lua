@@ -25,6 +25,12 @@ opt.termguicolors = true
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
-opt.conceallevel = 2 -- set conceal level for obsidian plugin
+vim.opt_local.conceallevel = 0 
 
+opt.textwidth=0
+opt.wrapmargin=0
+vim.wo.wrap=true
+vim.wo.linebreak=true
+
+opt.conceallevel=0
 

@@ -30,6 +30,9 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
+    ui = {
+      enable = false
+    },
     workspaces = {
   --    {
   --      name = "personal",
@@ -37,7 +40,7 @@ return {
   --    },
       {
         name = "Notes",
-        path = "~/shared-drives/X:/MyNotes-2024",
+        path = "/mnt/hgfs/MyNotes-2024/",
       },
     },
 
@@ -96,3 +99,4 @@ return {
       tags = "",
   },
 }
+
