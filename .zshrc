@@ -100,9 +100,11 @@ setopt hist_find_no_dups
 setopt hist_verify            # show command with history expansion to user before running it
 #setopt share_history         # share command history data
 
-#export path neovim
-export PATH=$PATH:~/.nvim/bin
 # force zsh to show the complete history
+alias laby="tmuxinator start lab"
+alias labx="tmuxinator stop lab"
+alias notesy="tmuxinator start notes"
+alias notesx="tmuxinator stop notes"
 alias cl="clear"
 alias history="history 0"
 alias ff="fzf --preview 'cat {}'"
@@ -113,7 +115,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-alias listen='nc -nlvp'
+alias listen='rlwrap nc -nlvp'
 alias tundump='sudo tcpdump -i tun0'
 alias shellgen='/home/kali/shellgen/shellgen'
 alias chmodx='chmod +x'
