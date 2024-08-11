@@ -1,8 +1,9 @@
 #!/bin/bash
 #
-#
-sudo apt install imagemagick -y && sudo apt install libmagickwand-dev -y && sudo apt install liblua5.1-0-dev -y && sudo apt install luajit -y
-echo "installed packages"
+
+# install nvim dependency
+sudo apt install imagemagick -y && sudo apt install libmagickwand-dev -y && sudo apt install liblua5.1-0-dev -y && sudo apt install luajit -y && sudo apt install fzf -y
+echo "installed packages" 
 
 echo "installing tmp plugin manager for tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
