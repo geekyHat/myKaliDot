@@ -1,0 +1,94 @@
+# My Tmux Cheat Sheet (Prefix = `Ctrl + Space`)
+
+Prefix key is set to **`Ctrl + Space`** instead of the default `Ctrl + b`.
+
+---
+
+## Core Navigation & Management
+
+- `prefix` = `Ctrl + Space`
+- `prefix + :` → Open tmux command prompt
+- `prefix + d` → Detach session
+- `prefix + r` → Reload tmux config (custom)
+
+---
+
+## Windows
+
+| Action                    | Shortcut                 | Notes                                              |
+|---------------------------|--------------------------|----------------------------------------------------|
+| New window                | `prefix + c`             |                                                    |
+| Rename window             | `prefix + ,`             |                                                    |
+| List windows              | `prefix + w`             | Navigate with arrows or j/k, press Enter to select |
+| Next window               | `prefix + n`             |                                                    |
+| Previous window           | `prefix + p`             |                                                    |
+| Switch by number          | `prefix + [0–9]`         |                                                    |
+| Close window              | `prefix + &`             | Confirms before closing                            |
+
+---
+
+## Sessions
+
+| Action                       | Shortcut / Command                      | Notes                                  |
+|------------------------------|-------------------------------------------|-----------------------------------------|
+| List sessions                | `prefix + s` / `tmux ls`                  |                                        |
+| Switch session (prev/next)   | `prefix + (` / `prefix + )`              |                                        |
+| Switch to named session      | `tmux switch -t <name>`                  |                                        |
+| Rename session               | `prefix + :` → `rename-session <name>`   |                                        |
+| Attach to session            | `tmux attach -t <name>`                 | From outside tmux                      |
+| Create new session           | `tmux new -s <name>`                    |                                        |
+
+---
+
+## Panes (Splits)
+
+| Action                     | Shortcut                        | Notes                                     |
+|----------------------------|----------------------------------|--------------------------------------------|
+| Split vertically           | `prefix + |`                    | Custom                                     |
+| Split horizontally         | `prefix + -`                    | Custom                                     |
+| Move between panes         | `prefix + Arrow Keys`          |                                           |
+| Resize pane                | `prefix + Alt + Arrow Keys`    | Custom                                     |
+| Swap panes                 | `prefix + o`                   |                                           |
+| Close pane                 | `prefix + x`                   | Confirm with `y`                          |
+| Zoom / unzoom pane         | `prefix + z`                   | Fullscreen a pane temporarily             |
+| Exit pane                  | `exit` or `Ctrl + d`           | Shell-level                               |
+
+---
+
+## Copy Mode / Scrolling
+
+| Action               | Shortcut        | Notes                                |
+|----------------------|-----------------|---------------------------------------|
+| Enter copy mode      | `prefix + [`    | Use arrows or vi keys if enabled     |
+| Exit copy mode       | `q` or `Esc`    |                                      |
+| Start selection      | `Space`         | In copy mode                         |
+| Copy selection       | `Enter`         |                                      |
+| Paste buffer         | `prefix + ]`    |                                      |
+
+---
+
+## Other Useful Commands
+
+| Action                               | Command                                  | Notes                              |
+|---------------------------------------|-------------------------------------------|-------------------------------------|
+| Kill session                          | `tmux kill-session -t <name>`            |                                     |
+| Kill all sessions except current     | `tmux kill-session -a`                   |                                     |
+| Rename current window                | `tmux rename-window <name>`             | Same as `prefix + ,`               |
+| Show all key bindings                | `tmux list-keys`                         |                                     |
+| Show active sessions                 | `tmux ls`                                |                                     |
+
+---
+
+## Quick Muscle Memory
+
+- `prefix` → `Ctrl + Space`  
+- New Window: `prefix + c`  
+- Split: `prefix + |` (vert) or `prefix + -` (horiz)  
+- Close pane: `prefix + x`  
+- Rename window: `prefix + ,`  
+- List sessions: `prefix + s`  
+- Switch panes: `prefix + Arrow`  
+- Copy mode: `prefix + [`
+
+---
+
